@@ -119,7 +119,7 @@ class _BikerdetailsState extends State<Bikerdetails> {
                           enabledBorder: const UnderlineInputBorder(
                               borderSide:
                                   BorderSide(color: Colors.green, width: 2)),
-                          hintText: "${loginController.to.logindata!.name}",
+                          hintText: loginController.to.logindata!.name,
                         ),
                         keyboardType: TextInputType.name,
                       ),

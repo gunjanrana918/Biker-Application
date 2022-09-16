@@ -1,3 +1,4 @@
+import 'package:biker_app/Screens/Biker%20Profile/change%20password.dart';
 import 'package:biker_app/Screens/Biker%20Profile/login.dart';
 import 'package:biker_app/Screens/Biker%20Profile/updateprofile.dart';
 import 'package:biker_app/Screens/Product%20Screen/History.dart';
@@ -9,7 +10,7 @@ import 'package:getwidget/components/toggle/gf_toggle.dart';
 import 'package:getwidget/types/gf_toggle_type.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -91,46 +92,50 @@ class _DashboardState extends State<Dashboard> {
               ),
               title: const Text("Profile Update"),
             ),
-            Padding(padding: EdgeInsets.only(top: 10.0)),
+            const Padding(padding: EdgeInsets.only(top: 10.0)),
             ListTile(
               shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Colors.white),
+                side: const BorderSide(width: 1, color: Colors.white),
                 borderRadius: BorderRadius.circular(10),
               ),
-              onTap: () {},
-              leading: Icon(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ChangePassword();
+                }));
+              },
+              leading: const Icon(
                 Icons.lock,
                 size: 28.0,
                 color: Colors.black,
               ),
-              trailing: Icon(
+              trailing: const Icon(
                 Icons.arrow_forward_ios_rounded,
                 size: 19.0,
               ),
-              title: Text("Change password"),
+              title: const Text("Change password"),
             ),
-            Padding(padding: EdgeInsets.only(top: 10.0)),
+            const Padding(padding: EdgeInsets.only(top: 10.0)),
             ListTile(
               shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Colors.white),
+                side: const BorderSide(width: 1, color: Colors.white),
                 borderRadius: BorderRadius.circular(10),
               ),
               onTap: () {},
-              leading: Icon(
+              leading: const Icon(
                 Icons.privacy_tip_outlined,
                 size: 28.0,
                 color: Colors.black,
               ),
-              trailing: Icon(
+              trailing: const Icon(
                 Icons.arrow_forward_ios_rounded,
                 size: 19.0,
               ),
-              title: Text("Terms and Condition"),
+              title: const Text("Terms and Condition"),
             ),
-            Padding(padding: EdgeInsets.only(top: 10.0)),
+            const Padding(padding: EdgeInsets.only(top: 10.0)),
             ListTile(
               shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Colors.white),
+                side: const BorderSide(width: 1, color: Colors.white),
                 borderRadius: BorderRadius.circular(10),
               ),
               onTap: () {
@@ -152,7 +157,7 @@ class _DashboardState extends State<Dashboard> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Loginscreen()));
+                                  builder: (context) => const Loginscreen()));
                         },
                         child: const Text("Yes"),
                       )
@@ -160,16 +165,16 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 );
               },
-              leading: Icon(
+              leading: const Icon(
                 Icons.logout_rounded,
                 size: 28.0,
                 color: Colors.black,
               ),
-              trailing: Icon(
+              trailing: const Icon(
                 Icons.arrow_forward_ios_rounded,
                 size: 19.0,
               ),
-              title: Text("Logout"),
+              title: const Text("Logout"),
             )
           ],
         ),
@@ -178,12 +183,12 @@ class _DashboardState extends State<Dashboard> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: _currentIndex == 0
-              ? Homepage()
+              ? const Homepage()
               : _currentIndex == 1
-                  ? Walletpage() //History()
+                  ? const Walletpage() //History()
                   : _currentIndex == 2
-                      ? History()
-                      : Bikerupdatedetails(),
+                      ? const History()
+                      : const Bikerupdatedetails(),
         ),
       ),
       bottomNavigationBar: Container(
@@ -212,7 +217,7 @@ class _DashboardState extends State<Dashboard> {
           currentIndex: _currentIndex,
           selectedItemColor: Colors.green,
           showUnselectedLabels: true,
-          unselectedLabelStyle: TextStyle(color: Colors.black87),
+          unselectedLabelStyle: const TextStyle(color: Colors.black87),
           onTap: (value) {
             // Respond to item press.
             setState(() {

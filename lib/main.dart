@@ -1,6 +1,5 @@
+import 'package:biker_app/Screens/Product%20Screen/dashboard.dart';
 import 'package:flutter/material.dart';
-
-import 'Screens/Biker Profile/Signupscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const SignUP(),
+      home: const Dashboard(),
     );
   }
 }

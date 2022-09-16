@@ -181,7 +181,7 @@ class _AfteracceptorderState extends State<Afteracceptorder> {
                               ),
                             ),
                             const Padding(padding: EdgeInsets.only(left: 30.0)),
-                            Container(
+                            SizedBox(
                               height: 50,
                               width: 120,
                               child: TextButton.icon(
